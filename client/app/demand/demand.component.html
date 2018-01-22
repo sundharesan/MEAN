@@ -1,0 +1,103 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Demand Page</h2>
+    <form name="form" (ngSubmit)="f.form.valid && saveDemand()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !demandID.valid }">
+            <label for="demandID">Demand ID</label>
+            <input type="text" class="form-control" name="demandID" [(ngModel)]="model.demandID" #demandID="ngModel" readonly/>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !accountName.valid }">
+            <label for="accountName">Account Name</label>
+            <input type="text" class="form-control" name="accountName" [(ngModel)]="model.accountName" #accountName="ngModel" required/>
+            <div *ngIf="f.submitted && !accountName.valid" class="help-block">Account Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !sbu.valid }">
+            <label for="sbu">SBU</label>
+            <select class="form-control" name="sbu" [(ngModel)]="model.sbu" #sbu="ngModel" required>
+                <option value="">--Select--</option>
+                <option value="Ram">Ram</option>
+                <option value="Raj">Raj</option>
+                <option value="kamal">Kamal</option>
+            </select>
+            <div *ngIf="f.submitted && !sbu.valid" class="help-block">SBU is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !deliveryRegion.valid }">
+            <label for="deliveryRegion">Delivery Region</label>
+            <select class="form-control" name="deliveryRegion" [(ngModel)]="model.deliveryRegion" #deliveryRegion="ngModel" required>
+                <option value="">--Select--</option>
+                <option value="Ram">Ram</option>
+                <option value="Raj">Raj</option>
+                <option value="kamal">Kamal</option>
+            </select>
+            <div *ngIf="f.submitted && !deliveryRegion.valid" class="help-block">Delivery Region is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !r2d2.valid }">
+            <label for="r2d2">R2D2</label>
+            <input type="text" class="form-control" name="r2d2" [(ngModel)]="model.r2d2" #r2d2="ngModel" required />
+            <div *ngIf="f.submitted && !r2d2.valid" class="help-block">R2D2 is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !projectCode.valid }">
+            <label for="projectCode">Project Code</label>
+            <input type="text" class="form-control" name="projectCode" [(ngModel)]="model.projectCode" #projectCode="ngModel" required />
+            <div *ngIf="f.submitted && !projectCode.valid" class="help-block">Project Codes is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !demandReceivedDate.valid }">
+            <label for="demandReceivedDate">Demand Received Date</label>
+            <input type="text" class="form-control" name="demandReceivedDate" [(ngModel)]="model.demandReceivedDate" #demandReceivedDate="ngModel" required />
+            <div *ngIf="f.submitted && !demandReceivedDate.valid" class="help-block">Demand Received Date is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !demandReceivedFrom.valid }">
+            <label for="demandReceivedFrom">Demand Received From</label>
+            <input type="text" class="form-control" name="demandReceivedFrom" [(ngModel)]="model.demandReceivedFrom" #demandReceivedFrom="ngModel" required />
+            <div *ngIf="f.submitted && !demandReceivedFrom.valid" class="help-block">Demand Received From is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !skills.valid }">
+            <label for="skills">Skills</label>
+            <input type="text" class="form-control" name="skills" [(ngModel)]="model.skills" #skills="ngModel" required />
+            <div *ngIf="f.submitted && !skills.valid" class="help-block">Skills are required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !jobDescription.valid }">
+            <label for="jobDescription">Job Description</label>
+            <input type="text" class="form-control" name="jobDescription" [(ngModel)]="model.jobDescription" #jobDescription="ngModel" required />
+            <div *ngIf="f.submitted && !jobDescription.valid" class="help-block">Job Description are required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !count.valid }">
+            <label for="count">Count</label>
+            <input type="text" class="form-control" name="count" [(ngModel)]="model.count" #count="ngModel" required />
+            <div *ngIf="f.submitted && !count.valid" class="help-block">Count is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !startDate.valid }">
+            <label for="startDate">Start Date</label>
+            <input type="text" class="form-control" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel" required />
+            <div *ngIf="f.submitted && !startDate.valid" class="help-block">Start Date is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !endDate.valid }">
+            <label for="endDate">End Date</label>
+            <input type="text" class="form-control" name="endDate" [(ngModel)]="model.endDate" #endDate="ngModel" required />
+            <div *ngIf="f.submitted && !endDate.valid" class="help-block">End Date is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !level.valid }">
+            <label for="level">Level</label>
+            <select class="form-control" name="level" [(ngModel)]="model.level" #level="ngModel" required>
+                <option value="">--Select--</option>
+                <option value="Ram">Ram</option>
+                <option value="Raj">Raj</option>
+                <option value="kamal">Kamal</option>
+            </select>
+            <div *ngIf="f.submitted && !level.valid" class="help-block">Level is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !status.valid }">
+            <label for="status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="model.status" #status="ngModel" required>
+                <option value="">--Select--</option>
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+            </select>
+            <div *ngIf="f.submitted && !status.valid" class="help-block">Status is required</div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">Add Demand</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a [routerLink]="['']" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>

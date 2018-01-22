@@ -1,0 +1,44 @@
+<div>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th>Demand ID</th>
+		<th>Account Name</th>
+		<th>SBU</th>
+		<th>Delivery Region</th>
+		<th>R2D2</th>
+		<th>Project Code</th>
+		<th>Demand Received Date</th>
+		<th>Demand Recceived From</th>
+		<th>Skills</th>
+		<th>Job Description</th>
+		<th>Count</th>
+		<th>Start Date</th>
+		<th>End Date</th>
+		<th>Level</th>
+		<th>Status</th>
+		<th>Action</th>
+	</tr>
+</thead>
+<tbody>
+	<tr *ngFor="let demand of demands">
+	    <td>{{demand.demandID}}</td>
+	    <td>{{demand.accountName}}</td>
+	    <td>{{demand.sbu}}</td>
+	    <td>{{demand.deliveryRegion}}</td>
+	    <td>{{demand.r2d2}}</td>
+	    <td>{{demand.projectCode}}</td>
+	    <td>{{demand.demandReceivedDate}}</td>
+	    <td>{{demand.demandReceivedFrom}}</td>
+	    <td>{{demand.skills}}</td>
+	    <td>{{demand.jobDescription}}</td>
+	    <td>{{demand.count}}</td>
+	    <td>{{demand.startDate}}</td>
+	    <td>{{demand.endDate}}</td>
+	    <td>{{demand.level}}</td>
+	    <td>{{demand.status}}</td>
+	    <td><a (click)="deleteDemand(demand._id)">Delete</a></td>
+	</tr>
+</tbody>
+</table>
+</div>
